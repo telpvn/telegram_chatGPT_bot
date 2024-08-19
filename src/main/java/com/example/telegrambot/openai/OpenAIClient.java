@@ -41,8 +41,9 @@ public class OpenAIClient {
         HttpEntity<String> httpEntity = new HttpEntity<>(request, httpHeaders);
         ResponseEntity<ChatCompletionObject> responseEntity = restTemplate.exchange(
                 url, HttpMethod.POST, httpEntity, ChatCompletionObject.class
-                ); {
-                    return responseEntity.getBody();
+        );
+        {
+            return responseEntity.getBody();
         }
 
     }
