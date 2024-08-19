@@ -20,7 +20,7 @@ public class OpenAIClient {
 
         HttpHeaders httpHeaders = new HttpHeaders();
         httpHeaders.set("Authorization", "Bearer " + token);
-        httpHeaders.set("Content-Type", "application/jason");
+        httpHeaders.set("Content-Type", "application/json");
 
         String request = """
                 {
