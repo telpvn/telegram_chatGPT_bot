@@ -24,7 +24,7 @@ public class TelegramBot extends TelegramLongPollingBot {
         var chatId = update.getMessage().getChatId();
 
         var chatCompletionResponse = openAIClient.createChatCompletion(text);
-        var textResponse = chatCompletionResponse.getChoices().get(0).getMessage().getContent();
+        var textResponse = chatCompletionResponse.choices().get(0).message().content();
 
         SendMessage sendMessage = new SendMessage(chatId.toString(), textResponse);
         sendApiMethod(sendMessage);

@@ -1,10 +1,9 @@
 package com.example.telegrambot.openai;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
+import com.fasterxml.jackson.annotation.JsonProperty;
 
-@Data
-public class Choice {
+public record Choice(
 
-    private final Message message;
+        @JsonProperty("message") Message message
+) {
 }

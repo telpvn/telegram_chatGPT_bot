@@ -1,17 +1,12 @@
 package com.example.telegrambot.openai;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
+import com.fasterxml.jackson.annotation.JsonProperty;
 
-import java.util.ArrayList;
 import java.util.List;
 
-@Data
-public class ChatCompletionObject {
 
-    private final List<Choice> choices;
+public record ChatCompletionObject(
 
-    public ChatCompletionObject() {
-        choices = new ArrayList<>();
-    }
-}
+        @JsonProperty("choices") List<Choice> choices
+) {}
+
